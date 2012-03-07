@@ -1,4 +1,8 @@
 Feed::Application.routes.draw do
+  resources :posts
+
+  get "feed/index"
+ root :to => "feed#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
