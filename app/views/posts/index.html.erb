@@ -17,6 +17,9 @@
     <td><%= link_to 'Les mer', post %></td>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
     <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
+    
+
+
   </tr>
 <% end %>
 </table>
@@ -24,3 +27,4 @@
 <br />
 
 <%= link_to 'New Post', new_post_path %>
+<link href="http://localhost:3000/posts"  title="RSS" type="application/rss+xml" />

@@ -10,6 +10,14 @@ class PostsController < ApplicationController
     end
   end
 
+  def last_post
+      @posts = Post.all(:select => "title, author, id, content, posted_at", :order => "posted_at DESC", :limit => 20)
+    respond_to do |format|
+      format.html
+      format.rss{render :layout => false}
+    end 
+  end
+
   # GET /posts/1
   # GET /posts/1.json
   def show
