@@ -3,6 +3,7 @@ Feed::Application.routes.draw do
 
   get "feed/index"
  root :to => "feed#index"
+ get "posts/last_post.rss"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
