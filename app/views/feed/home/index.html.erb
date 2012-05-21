@@ -1,0 +1,7 @@
+<h1>Feeds</h1>
+<h2><%= link_to @title, @link, :target => "_blank" %></h2>
+
+<% @items.each do |item| %>
+    <small>(<%= item.date.strftime('%d/%m/%Y') %>)</small> -
+    <strong><%= link_to item.title, item.link, :target => "_blank" %></strong> <br />
+<% end %>
