@@ -18,9 +18,6 @@ module Feed
 
         #Sort items by date, newest to oldest
         @sorted_items = @sorted_items.sort_by{ |item| item.date}.reverse
-
-        puts "========================ITEMS==========================="
-        puts @sorted_items
       end
 
     end
