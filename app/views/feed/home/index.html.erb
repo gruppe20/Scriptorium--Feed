@@ -3,7 +3,11 @@
 <h2>News</h2>
 <% get_feeds %>
 <% @sorted_items.each do |item| %>
-  <small>(<%= item[:item].date.strftime('%H:%M %d/%m/%Y') %>)</small>
-  <small><%= link_to item[:parent].channel.title, item[:parent].channel.link %></small> -
-  <strong><%= link_to item[:item].title, item[:item].link, :target => "_blank" %></strong> <br />
+  <div class="story">
+    <%= link_to item[:item].title, item[:item].link, :target => "_blank", :class => "story_title" %>
+    <span class="story_datetime">(<%= item[:item].date.strftime('%H:%M %d/%m/%Y') %>)</span>
+    <%= link_to item[:parent].channel.title, item[:parent].channel.link, :class => "story_source" %>
+  </div>
+  
+
 <% end %>
